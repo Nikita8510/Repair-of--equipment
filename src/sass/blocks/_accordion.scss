@@ -1,0 +1,115 @@
+$midnight: #ffffff;
+$clouds: #ecf0f1;
+// General
+
+.accordion{
+  padding-top: 127px;
+  min-height: 632px;
+  position: relative;
+  
+  h3{
+    text-align: center;
+    color: var(--text-white);
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 43px;
+  }
+}
+.accordion::before{
+  content: '';
+  background-image: url(../img/accordion-fon.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0px;
+  z-index: 5;
+  width: 100%;
+  height: 572px;
+  z-index: -2;
+}
+
+
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+// Layout
+.row {
+  display:flex;
+  position: relative;
+  z-index: 99;
+  .col {
+    flex: 1;
+    &:last-child {
+      margin-left: 1em;
+    }
+  }
+}
+/* Accordion styles */
+.tabs {
+  overflow: hidden;
+}
+.tab {
+  width: 100%;
+  color: var(--title--color);
+  border-radius: 2px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  &-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 27px 11px;
+    background: $midnight;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--title--color);
+    cursor: pointer;
+    /* Icon */
+    &:hover {
+      background: darken($midnight, 10%);
+    }
+    &::after {
+      content: "\276F";
+      width: 1em;
+      height: 1em;
+      text-align: center;
+      transition: all .35s;
+    }
+  }
+  &-content {
+    max-height: 0;
+    padding: 0 1em;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color);
+    background: white;
+    transition: all .35s;
+  }
+  &-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background: $midnight;
+    cursor: pointer;
+    &:hover {
+      background: darken($midnight, 10%);
+    }
+  }
+}
+
+input:checked {
+  + .tab-label {
+    background: darken($midnight, 10%);
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+  ~ .tab-content {
+    max-height: 100vh;
+    padding: 1.3em 1em;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color);
+  }
+}

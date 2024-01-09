@@ -1,0 +1,75 @@
+.price-service{
+    background: url(../img/fon-price-service.png) center center;
+    background-repeat: no-repeat;
+    padding-top: 155px;
+    padding-bottom: 155px;
+    
+    &__item{
+        min-height: 150px;
+        flex-basis: calc(25.33333% - 30px);
+         margin: 0 10px 20px;
+        padding: 28px;
+        overflow: hidden;
+        background-color: #ffffff;
+        
+    .price{
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--brown);
+    }
+    }
+    h3{
+        color: var(--text-white);
+        font-size: 36px;
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: 40px;
+      
+        span{
+            color: var(--red);
+        }
+    }
+    h4{
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+    p{
+        font-size: 14px;
+        color: var(--text-color);
+        line-height: 25px;
+        margin-bottom: 36px;
+    }
+    &__list{
+        display: flex;
+        justify-content: center; 
+        align-items: flex-start;
+        flex-wrap: wrap;
+        .price-free{
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(29, 27, 27, 0.5)), url(../img/price-free--fon.jpg) center center;
+            background-size: cover;
+
+            h6{
+                color: var(--text-white);
+                text-transform: uppercase;
+            }
+        }
+    }
+    &__card-content{
+        position: relative;
+        display: flex;
+       h4{
+        color: var(--text-white);
+       }
+        p{
+            max-width: 138px;
+        }
+        img{
+            position: absolute;
+            bottom: -46px;
+            right: -28px;
+            max-width: 112px;
+        }
+    }
+}
+

@@ -1,0 +1,40 @@
+.discount{
+    background: url(../img/discount-fon.png) center center;
+    background-repeat: no-repeat;
+    padding: 143px 0px;
+    .container{
+     position: relative;
+    }
+ 
+    
+     
+        img{
+            position: absolute;
+            right: 0px;
+            bottom: -90px;
+            max-width: 632px;
+        }
+   
+    &__content{
+        color: var(--text-white);
+        h3{
+            font-weight: 400;
+            max-width: 489px;
+            font-size: 36px;
+            margin-bottom: 25px;
+        }
+        p{
+            font-weight: 400;
+           line-height: 20px;
+            font-size: 14px;
+            max-width: 404px;
+            margin-bottom: 20px;
+        }
+        .btn{
+            background-color: var(--red);
+        }
+        .btn:hover{
+            background-color: #ffffff;
+        }
+    }
+}
